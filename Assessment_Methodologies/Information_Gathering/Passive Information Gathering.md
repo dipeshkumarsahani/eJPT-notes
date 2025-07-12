@@ -1,5 +1,5 @@
 <h2>
-  1.Assessment Methodologies->Information Gathering->
+  1.Assessment Methodologies | Information Gathering |
   <code>Passive Information Gathering</code>
 </h2>
 
