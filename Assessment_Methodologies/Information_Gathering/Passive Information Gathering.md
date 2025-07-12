@@ -299,3 +299,42 @@ intitle:index of
 📌 Great for **finding hidden input fields**, parameters, or vulnerable past versions.
 
 ---
+
+## `theHarvester` – OSINT Recon Tool
+
+**Command:**
+```bash
+theHarvester -d <domain> -b <search_engine>
+````
+
+**Description:**
+`theHarvester` is an **open-source intelligence (OSINT) tool** used to gather public data about a domain. It collects:
+
+* 📧 Email addresses
+* 🌐 Subdomains
+* 🖥️ IP addresses
+* 🔍 Hostnames
+
+**Use Cases:**
+
+* Early-phase recon to discover external assets
+* Identify potential entry points via email or subdomains
+* Supports multiple public sources: Google, Bing, Yahoo, Baidu, DuckDuckGo, etc.
+
+**Example:**
+
+```bash
+theHarvester -d example.com -b bing
+```
+
+**Popular Options:**
+
+```bash
+-b all     # Use all supported search engines
+-l 100     # Limit results to 100
+-f result.html  # Save output in HTML format
+```
+
+📌 **Tip:** Great for passive recon without alerting the target.
+
+---
