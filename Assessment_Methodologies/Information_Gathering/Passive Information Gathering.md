@@ -338,3 +338,23 @@ theHarvester -d example.com -b bing
 📌 **Tip:** Great for passive recon without alerting the target.
 
 ---
+##  Data Breach Lookup – haveibeenpwned.com
+
+🔗 Website: [https://haveibeenpwned.com](https://haveibeenpwned.com)
+
+**Description:**  
+HaveIBeenPwned is a public breach database that lets you check if an **email, phone number, or domain** has been exposed in data breaches.
+
+**Use Cases for Pentesters:**
+- Discover leaked emails or passwords from your target domain
+- Identify employees affected by breaches (useful in social engineering)
+- Find reused credentials that may still be active
+
+**Steps:**
+1. Go to [https://haveibeenpwned.com](https://haveibeenpwned.com)
+2. Enter an email or domain
+3. Review breach details and leaked sources
+
+📌 **Note:** This is a **passive recon** method — no contact with the target systems.
+
+---
