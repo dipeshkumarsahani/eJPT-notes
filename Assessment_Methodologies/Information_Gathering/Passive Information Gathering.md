@@ -1,6 +1,4 @@
-<h1>1.Assessment Methodologies</h1><br>
-<h2>Information Gathering</h2>
-<h2>Passive Information Gathering</h2>
+<h2>1.Assessment Methodologies->Information Gathering->Passive Information Gathering</h2>
 
 ---
 ### `host` - Find IP Address of a Website
