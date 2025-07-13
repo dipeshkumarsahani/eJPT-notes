@@ -4,7 +4,7 @@
   
 </h2>
 
-# 🗺️ Footprinting & Scanning – Mapping a Network
+# 🗺️ Footprinting & Scanning – `Mapping a Network`
 
 ---
 
@@ -131,3 +131,117 @@ nmap -sn 10.0.2.0/24
 
 ---
 
+# 🚪 Footprinting & Scanning – `Port Scanning`
+
+---
+
+## 🎯 Purpose
+
+Port scanning helps identify:
+- Open ports on target systems
+- Running services and versions
+- OS fingerprinting and possible vulnerabilities
+
+It is the **first active step** toward deeper enumeration and exploitation.
+
+---
+
+## ⚙️ Process
+
+1. Prepare a list of **target IPs**
+2. Choose appropriate **scanning options** (stealthy, full, fast, etc.)
+3. Use tools to **detect ports, services, and OS**
+4. Analyze results to plan next steps (e.g., vulnerability scan)
+
+---
+
+## 🧰 Tools Used
+
+| Tool             | Purpose                                        |
+|------------------|------------------------------------------------|
+| `nmap`           | Primary scanner – TCP/UDP ports, services, OS |
+| `Zenmap`         | GUI frontend for Nmap                         |
+| `NmapAutomator`  | Bash wrapper for automating Nmap scans        |
+| `Masscan`        | Lightning-fast port scanner                   |
+| `RustScan`       | Fast scanner, used with Nmap for deep scan    |
+| `AutoRecon`      | Full recon automation tool                    |
+
+---
+
+## 🔧 Nmap Usage
+
+---
+
+### 📁 Step 1: Provide a List of IPs
+
+Create a file with targets:
+```bash
+nano ips.txt
+````
+
+```
+192.168.1.10
+192.168.1.11
+```
+
+---
+
+### ⚡ Step 2: Basic Port Scan
+
+```bash
+nmap -iL ips.txt
+```
+
+* `-iL`: input from file
+
+---
+
+### 🔍 Step 3: Service & OS Detection
+
+```bash
+sudo nmap -iL ips.txt -sV -O
+```
+
+* `-sV`: Detect service versions
+* `-O`: OS detection
+
+---
+
+### 🔎 Step 4: Default Script Scan
+
+```bash
+sudo nmap -iL ips.txt -sV -O -sC
+```
+
+* `-sC`: Run default Nmap scripts
+* Very useful for basic vulnerability detection
+
+---
+
+## 🖥️ Other Tools
+
+| Tool              | Use Case                                 |
+| ----------------- | ---------------------------------------- |
+| **Zenmap**        | Nmap GUI with profile presets and logs   |
+| **NmapAutomator** | Automates multiple Nmap scans            |
+| **Masscan**       | Very fast port scan (like Nmap's `-p-`)  |
+| **RustScan**      | Blazing fast, pipes to Nmap for details  |
+| **AutoRecon**     | Full automation (host discovery + scans) |
+
+---
+
+## 📌 Summary
+
+| Tool        | Use For                       |
+| ----------- | ----------------------------- |
+| `nmap`      | Deep, flexible scanning       |
+| `masscan`   | Extremely fast scanning       |
+| `rustscan`  | Speed + integration with Nmap |
+| `zenmap`    | GUI interface for Nmap        |
+| `autorecon` | Automated recon workflow      |
+
+---
+
+💡 **Tip:** Start with fast scanners (RustScan, Masscan) → feed into Nmap for deeper scans.
+
+---
